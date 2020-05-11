@@ -1,0 +1,55 @@
+DATASETS:
+    TRAIN: ('multiview_h36m_train',)
+    #TRAIN: ('h36m_val',)
+    TEST: ('multiview_h36m_val', )
+    TASK: multiview_keypoint
+    DATA_FORMAT: jpg
+    IMAGE_SIZE: (384, 384)
+    IMAGE_RESIZE: 1. #3.90625 #1000. / 256 
+    PREDICT_RESIZE: 1. 
+    H36M:
+        TRAIN_SAMPLE: 0
+        MAPPING: False
+    SCALE_FACTOR: 0.25 
+    ROT_FACTOR: 30
+DATALOADER:
+    NUM_WORKERS: 14
+BACKBONE:
+    ENABLED: True
+    BODY: epipolarposeR-152
+    PRETRAINED: True
+    PRETRAINED_WEIGHTS: datasets/pose_resnet_4.5_pixels_human36m.pth
+    DOWNSAMPLE: 4
+    SYNC_BN: True
+SOLVER:
+    OPTIMIZER: adam
+    BASE_LR: 0.001
+    STEPS: (3, 4)
+    MAX_EPOCHS: 5
+    IMS_PER_BATCH: 8
+    CHECKPOINT_PERIOD: 1
+EPIPOLAR:
+    TOPK: 2
+    MERGE: late
+    SHARE_WEIGHTS: True 
+    ATTENTION: avg
+    PARAMETERIZED: ('z',)
+    PRETRAINED: False
+    ZRESIDUAL: True
+    SAMPLESIZE: 64
+    USE_CORRECT_NORMALIZE: True
+TEST:
+    IMS_PER_BATCH: 1
+KEYPOINT:
+    HEATMAP_SIZE: (96, 96)
+    SIGMA: 12.
+    NUM_PTS: 17
+    TRIANGULATION: epipolar  
+    CONF_THRES: .85 
+    RANSAC_THRES: 35
+    LOSS: joint
+    LOSS_PER_JOINT: False
+VIS:
+    MULTIVIEW: True
+OUTPUT_DIR: outs/epipolar/keypoint_h36m_resnet152_384_pretrained_aug
+EVAL_FREQ: 1

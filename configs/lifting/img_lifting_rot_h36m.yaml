@@ -1,0 +1,22 @@
+DATASETS:
+    TRAIN: ('h36m_train',)
+    TEST: ('h36m_val', )
+    TASK: img_lifting_rot
+    H36M:
+        MAPPING: False
+BACKBONE:
+    ENABLED: True
+    BODY: R-50
+LIFTING:
+    ENABLED: True
+    AVELOSS_KP: True
+SOLVER:
+    OPTIMIZER: adam
+    BASE_LR: 1e-5
+    STEPS: (12,)
+    MAX_EPOCHS: 16
+KEYPOINT:
+    NUM_PTS: 17
+TEST:
+    PCK: False
+OUTPUT_DIR: outs/img_lifting_rot_h36m

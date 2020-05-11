@@ -1,0 +1,12 @@
+yacs
+ninja
+matplotlib
+tqdm
+tensorboardX
+torchvision
+ipyvolume
+vtk
+json_tricks
+colorama
+pymvg
+thop

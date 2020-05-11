@@ -1,0 +1,27 @@
+# CUDA_VISIBLE_DEVICES=2 python3 main.py --cfg configs/lifting/lifting_direct_h36m.yaml BACKBONE.ENABLED True DATASETS.TASK keypoint_lifting_direct DOTRAIN False
+DATASETS:
+    TRAIN: ('h36m_train',)
+    TEST: ('h36m_val', )
+    TASK: lifting_direct
+    IMAGE_SIZE: (256, 256)
+    IMAGE_RESIZE: 1. #3.90625 #1000. / 256 
+    PREDICT_RESIZE: 1.    
+    H36M:
+        MAPPING: False
+BACKBONE:
+    BODY: poseR-50
+LIFTING:
+    ENABLED: True
+    AVELOSS_KP: True
+SOLVER:
+    OPTIMIZER: adam
+    BASE_LR: 1e-5
+    STEPS: (12,)
+    MAX_EPOCHS: 16
+KEYPOINT:
+    HEATMAP_SIZE: (64, 64)
+    SIGMA: 8.
+    NUM_PTS: 17
+TEST:
+    PCK: False
+OUTPUT_DIR: outs/3D_heatmap_rot_h36m

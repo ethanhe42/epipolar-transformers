@@ -1,0 +1,15 @@
+DATASETS:
+    TRAIN: ('RHD_train',)
+    TEST: ('RHD_val',)
+    TASK: img_lifting_rot
+BACKBONE:
+    ENABLED: True
+LIFTING:
+    ENABLED: True
+    AVELOSS_KP: True
+SOLVER:
+    OPTIMIZER: adam
+    BASE_LR: 1e-5
+    STEPS: (12,)
+    MAX_EPOCHS: 16
+OUTPUT_DIR: outs/img_lifting_rot

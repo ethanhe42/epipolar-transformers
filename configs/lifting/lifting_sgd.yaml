@@ -1,0 +1,12 @@
+DATASETS:
+    TRAIN: ('RHD_train',)
+    TEST: ('RHD_val',)
+LIFTING:
+    ENABLED: True
+    AVELOSS_KP: True
+SOLVER:
+    OPTIMIZER: sgd
+    BASE_LR: 1e-3
+    STEPS: (20,30,)
+    MAX_EPOCHS: 40
+OUTPUT_DIR: outs/3D_heatmap

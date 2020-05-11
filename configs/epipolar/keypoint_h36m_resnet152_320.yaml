@@ -1,0 +1,41 @@
+DATASETS:
+    TRAIN: ('multiview_h36m_train',)
+    #TRAIN: ('h36m_val',)
+    TEST: ('multiview_h36m_val', )
+    TASK: multiview_keypoint
+    DATA_FORMAT: zip
+    IMAGE_SIZE: (320, 320)
+    IMAGE_RESIZE: 1. #3.90625 #1000. / 256 
+    PREDICT_RESIZE: 1. 
+DATALOADER:
+    NUM_WORKERS: 8
+BACKBONE:
+    ENABLED: True
+    BODY: epipolarposeR-152
+    PRETRAINED: True
+    DOWNSAMPLE: 4
+    SYNC_BN: True
+SOLVER:
+    OPTIMIZER: adam
+    BASE_LR: 0.001
+    STEPS: (20, 25)
+    MAX_EPOCHS: 30
+    IMS_PER_BATCH: 8
+    CHECKPOINT_PERIOD: 1
+    IMS_PER_BATCH: 12
+EPIPOLAR:
+    TOPK: 3
+    MERGE: late
+    SHARE_WEIGHTS: True 
+    ATTENTION: avg
+TEST:
+    IMS_PER_BATCH: 1
+KEYPOINT:
+    HEATMAP_SIZE: (80, 80)
+    SIGMA: 12.
+    NUM_PTS: 20
+    LOSS: joint
+VIS:
+    MULTIVIEW: True
+OUTPUT_DIR: outs/epipolar/keypoint_h36m_resnet152_320
+EVAL_FREQ: 1
