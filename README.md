@@ -1,4 +1,4 @@
-# Epipolar Transformer
+# Epipolar Transformers
 [Yihui He](http://yihui-he.github.io/), [Rui Yan](https://github.com/Yre), [Shoou-I Yu](https://sites.google.com/view/shoou-i-yu/home), [Katerina Fragkiadaki](https://www.cs.cmu.edu/~katef/), **CVPR 2020** 
 
 Carnegie Mellon University, Facebook Reality Labs
@@ -62,7 +62,7 @@ python main.py --cfg configs/xxx.yaml DOTRAIN False WEIGHTS xxx.pth
 ```
 
 ### visualization
-Epipolar Transformer Visualization: `scripts/vis_hm36_score.ipynb`
+Epipolar Transformers Visualization: `scripts/vis_hm36_score.ipynb`
 
 Human 3.6M input visualization
 ```bash
@@ -82,11 +82,11 @@ python run/pose2d/valid.py --cfg experiments-local/mixed/resnet50/256_fusion.yam
 python scripts/video.py --src outs/epipolar/keypoint_h36m_fixed/video/multiview_h36m_val/
 ```
 
-## Citing Epipolar Transformer
-If you find Epipolar Transformer helps your research, please cite the paper:
+## Citing Epipolar Transformers
+If you find Epipolar Transformers helps your research, please cite the paper:
 ```
-@inproceedings{epipolartransformer,
-title={Epipolar Transformer},
+@inproceedings{epipolartransformers,
+title={Epipolar Transformers},
 author={He, Yihui and Yan, Rui and Yu, Shoou-I and Fragkiadaki, Katerina},
 booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
 year={2020}
