@@ -1,4 +1,4 @@
-# Epipolar Transformers
+# [Epipolar Transformers](https://arxiv.org/abs/2005.04551)
 [Yihui He](http://yihui-he.github.io/), [Rui Yan](https://github.com/Yre), [Shoou-I Yu](https://sites.google.com/view/shoou-i-yu/home), [Katerina Fragkiadaki](https://www.cs.cmu.edu/~katef/), **CVPR 2020** 
 
 Carnegie Mellon University, Facebook Reality Labs
