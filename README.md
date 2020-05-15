@@ -3,9 +3,9 @@
 
 Carnegie Mellon University, Facebook Reality Labs
 
-oral presentation and human pose demo videos:
+oral presentation and human pose demo videos ([demo playlist](https://www.youtube.com/playlist?list=PLkz610aVEqV-f4Ws0pH0e8Nm_2wTGI1yP)):
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=s0J1YzxdWL0">
+  <a href="https://www.youtube.com/watch?v=nfb0kfVWjcs">
     <img width=420 src="assets/oral_presentation.png" alt>
   </a>
   <a href="https://www.youtube.com/watch?v=ig5c-qTaYkg">
@@ -85,11 +85,11 @@ python scripts/video.py --src outs/epipolar/keypoint_h36m_fixed/video/multiview_
 ## Citing Epipolar Transformers
 If you find Epipolar Transformers helps your research, please cite the paper:
 ```
-@inproceedings{epipolartransformers,
-title={Epipolar Transformers},
-author={He, Yihui and Yan, Rui and Yu, Shoou-I and Fragkiadaki, Katerina},
-booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-year={2020}
+@article{epipolartransformers,
+  title={Epipolar Transformers},
+  author={He, Yihui and Yan, Rui and Fragkiadaki, Katerina and Yu, Shoou-I},
+  journal={arXiv preprint arXiv:2005.04551},
+  year={2020}
 }
 ```
 
