@@ -76,12 +76,14 @@ python main.py --cfg configs/xxx.yaml DOTRAIN False WEIGHTS xxx.pth
 
 
 ### 2. Human 3.6M input visualization
+<img width=450 src="assets/h36m_vis.png" alt>
+
 ```bash
 python main.py --cfg configs/epipolar/keypoint_h36m.yaml DOTRAIN False DOTEST False EPIPOLAR.VIS True  VIS.H36M True SOLVER.IMS_PER_BATCH 1
 python main.py --cfg configs/epipolar/keypoint_h36m.yaml DOTRAIN False DOTEST False VIS.MULTIVIEWH36M True EPIPOLAR.VIS True SOLVER.IMS_PER_BATCH 1
 ```
 
-### 3. Human 3.6M video visualization
+### 3. Human 3.6M prediction visualization
 [example video](https://www.youtube.com/watch?v=ig5c-qTaYkg)
 ```bash
 # generate images
