@@ -2,7 +2,7 @@
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/epipolar-transformers/3d-human-pose-estimation-on-human36m)](https://paperswithcode.com/sota/3d-human-pose-estimation-on-human36m?p=epipolar-transformers)
 
-[Yihui He](http://yihui-he.github.io/), [Rui Yan](https://github.com/Yre), [Shoou-I Yu](https://sites.google.com/view/shoou-i-yu/home), [Katerina Fragkiadaki](https://www.cs.cmu.edu/~katef/) (Carnegie Mellon University, Facebook Reality Labs)
+[Yihui He](http://yihui-he.github.io/), [Rui Yan](https://github.com/Yre), [Katerina Fragkiadaki](https://www.cs.cmu.edu/~katef/), [Shoou-I Yu](https://sites.google.com/view/shoou-i-yu/home) (Carnegie Mellon University, Facebook Reality Labs)
 
 **CVPR 2020**, **[CVPR workshop Best Paper Award](https://vuhcs.github.io/)**
 
@@ -71,7 +71,7 @@ python main.py --cfg configs/xxx.yaml DOTRAIN False WEIGHTS xxx.pth
     
 - download [trained model](https://github.com/yihui-he/epipolar-transformers/releases/download/outputs/outs.epipolar.keypoint_h36m_fixed_aug.zip) and extract under `outs/`
 - make sure `outs/epipolar/keypoint_h36m_fixed_aug/visualizations/h36m/output_0.pkl` exist.
-- `cd script/`
+- `cd scripts/`
 - use [`scripts/vis_hm36_score.ipynb`](https://github.com/yihui-he/epipolar-transformers/blob/master/scripts/vis_hm36_score.ipynb)
 
 
@@ -84,7 +84,10 @@ python main.py --cfg configs/epipolar/keypoint_h36m.yaml DOTRAIN False DOTEST Fa
 ```
 
 ### 3. Human 3.6M prediction visualization
-[example video](https://www.youtube.com/watch?v=ig5c-qTaYkg)
+<a href="https://www.youtube.com/watch?v=ig5c-qTaYkg">
+  <img width=400 src="assets/human_pose_demo.png" alt>
+</a>
+
 ```bash
 # generate images
 python main.py --cfg configs/epipolar/keypoint_h36m_zresidual_fixed.yaml DOTRAIN False DOTEST True VIS.VIDEO True DATASETS.H36M.TEST_SAMPLE 2
