@@ -7,7 +7,7 @@
 **CVPR 2020**, **[CVPR workshop Best Paper Award](https://vuhcs.github.io/)**
 
 
-oral presentation and human pose demo videos ([demo playlist](https://www.youtube.com/playlist?list=PLkz610aVEqV-f4Ws0pH0e8Nm_2wTGI1yP)):
+Oral presentation and human pose demo videos ([playlist](https://www.youtube.com/playlist?list=PLkz610aVEqV-f4Ws0pH0e8Nm_2wTGI1yP)):
 <p align="center">
   <a href="https://www.youtube.com/watch?v=nfb0kfVWjcs">
     <img width=420 src="assets/oral_presentation.png" alt>
@@ -21,12 +21,12 @@ oral presentation and human pose demo videos ([demo playlist](https://www.youtub
 
 config | MPJPE (mm) | model & log
 :-------------------------:|:-------------------------:|:-------------------------
-[ResNet-50 256×256, triangulate](configs/benchmark/keypoint_h36m.yaml) | 45.3          |  [download](https://github.com/yihui-he/epipolar-transformers/releases/download/outputs/outs.epipolar.keypoint_h36m_fixed.zip)
+[ResNet-50 256×256, triangulate](configs/benchmark/keypoint_h36m.yaml) | 45.3          |  [download](https://github.com/yihui-he/epipolar-transformers/releases/download/outputs/outs.benchmark.keypoint_h36m_afterfix.zip)
 [ResNet-50 256×256, triangulate, epipolar transformer](configs/epipolar/keypoint_h36m_zresidual_fixed.yaml) | 33.1          |  [download](https://github.com/yihui-he/epipolar-transformers/releases/download/outputs/outs.epipolar.keypoint_h36m_fixed.zip)
 [ResNet-50 256×256, triangulate, epipolar transformer (augmentation)](configs/epipolar/keypoint_h36m_zresidual_aug.yaml) | 30.4         |  [download](https://github.com/yihui-he/epipolar-transformers/releases/download/outputs/outs.epipolar.keypoint_h36m_fixed_aug.zip)
 [ResNet-152 384×384, triangulate, epipolar transformer (extra data)](configs/epipolar/keypoint_h36m_resnet152_384_pretrained_8gpu.yaml) | 19.0         | 
 
-We also provides 2D to 3D lifting network implementation in these two papers:
+We also provide 2D to 3D lifting network implementations for these two papers:
 - [3D Hand Shape and Pose from Images in the Wild](https://arxiv.org/abs/1902.03451), CVPR 2019
   - `configs/lifting/img_lifting_rot_h36m.yaml` (Human 3.6M)
   - `configs/lifting/img_lifting_rot.yaml` (RHD)
@@ -35,47 +35,49 @@ We also provides 2D to 3D lifting network implementation in these two papers:
   - `configs/lifting/lifting_direct.yaml` (RHD)
 
 ## Setup
+
+### Requirements
 Python 3, pytorch > 1.2+ and pytorch < 1.4
 ```bash
 pip install -r requirements.txt
 conda install pytorch cudatoolkit=10.0 -c pytorch
 ```
-get pretrained weights:
+### Pretrained weights download
 ```bash
 mkdir outs
 cd outs
 bash ../datasets/get_pretrained_models.sh
 ```
 
-follow the instructions in `datasets/README.md` for preparing the dataset
+Please follow the instructions in `datasets/README.md` for preparing the dataset
 
-### training
+### Training
 ```bash
 python main.py --cfg path/to/config
 tensorboard --logdir outs/
 ```
 
-### testing
-testing with latest checkpoints
+### Testing 
+Testing with latest checkpoints
 ```bash
 python main.py --cfg configs/xxx.yaml DOTRAIN False
 ```
-testing with weights
+Testing with weights
 ```bash
 python main.py --cfg configs/xxx.yaml DOTRAIN False WEIGHTS xxx.pth
 ```
 
 ## Visualization
-### 1. Epipolar Transformers Visualization 
+### Epipolar Transformers Visualization 
 <img width=500 src="assets/et_vis.png" alt>
     
-- download [trained model](https://github.com/yihui-he/epipolar-transformers/releases/download/outputs/outs.epipolar.keypoint_h36m_fixed_aug.zip) and extract under `outs/`
-- make sure `outs/epipolar/keypoint_h36m_fixed_aug/visualizations/h36m/output_0.pkl` exist.
-- `cd scripts/`
-- use [`scripts/vis_hm36_score.ipynb`](https://github.com/yihui-he/epipolar-transformers/blob/master/scripts/vis_hm36_score.ipynb)
+- Download the [output pkls ](https://github.com/yihui-he/epipolar-transformers/releases/download/outputs/outs.epipolar.keypoint_h36m_fixed.visualizations.zip) for non-augmented models and extract under `outs/`
+- Make sure `outs/epipolar/keypoint_h36m_fixed/visualizations/h36m/output_1.pkl` exists.
+- Use [`scripts/vis_hm36_score.ipynb`](https://github.com/yihui-he/epipolar-transformers/blob/master/scripts/vis_hm36_score.ipynb)
+  - To select a point, click on the reference view (upper left), the source view along with corresponding epipolar line, and the peaks for different feature matchings are shown at the bottom left.
 
 
-### 2. Human 3.6M input visualization
+### Human 3.6M input visualization
 <img width=450 src="assets/h36m_vis.png" alt>
 
 ```bash
@@ -83,7 +85,7 @@ python main.py --cfg configs/epipolar/keypoint_h36m.yaml DOTRAIN False DOTEST Fa
 python main.py --cfg configs/epipolar/keypoint_h36m.yaml DOTRAIN False DOTEST False VIS.MULTIVIEWH36M True EPIPOLAR.VIS True SOLVER.IMS_PER_BATCH 1
 ```
 
-### 3. Human 3.6M prediction visualization
+### Human 3.6M prediction visualization
 <a href="https://www.youtube.com/watch?v=ig5c-qTaYkg">
   <img width=400 src="assets/human_pose_demo.png" alt>
 </a>
