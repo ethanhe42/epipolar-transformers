@@ -186,19 +186,19 @@ class Complex_Draw(object):
         def dist(x1, y1, x2, y2):
             return math.sqrt((x1 - x2)**2 + (y1-y2) **2)
 
-        flag = True
-        #  predicted - gt > baseline - gt
-        if dist(pix2coord(xx, 4), pix2coord(yy,4), gx, gy)*1.5 > dist(pix2coord(bxx, 4), pix2coord(byy,4), gx, gy):
-            flag = False
-        #  predicted - gt > TH: 3
-        if dist(pix2coord(bxx, 4), pix2coord(byy,4), gx, gy) < 5:
-            flag = False
+        # flag = True
+        # #  predicted - gt > baseline - gt
+        # if dist(pix2coord(xx, 4), pix2coord(yy,4), gx, gy)*1.5 > dist(pix2coord(bxx, 4), pix2coord(byy,4), gx, gy):
+        #     flag = False
+        # #  predicted - gt > TH: 3
+        # if dist(pix2coord(bxx, 4), pix2coord(byy,4), gx, gy) < 5:
+        #     flag = False
 
-        if flag:
-            print('img1 path: ', output.img1_path)
-            print('img2 path: ', output.img2_path)
-            print('pred - gt: ', dist(pix2coord(xx, 4), pix2coord(yy,4), gx, gy))
-            print('baseline - gt', dist(pix2coord(bxx, 4), pix2coord(byy,4), gx, gy))
+        # if flag:
+        #     print('img1 path: ', output.img1_path)
+        #     print('img2 path: ', output.img2_path)
+        #     print('pred - gt: ', dist(pix2coord(xx, 4), pix2coord(yy,4), gx, gy))
+        #     print('baseline - gt', dist(pix2coord(bxx, 4), pix2coord(byy,4), gx, gy))
 
         txt = self.sample_ax.text(0, 0, '', va="bottom", ha="left")
         txt.set_text('g: groundtruth; y: baseline; r: our prediction')
