@@ -45,8 +45,8 @@ conda install pytorch cudatoolkit=10.0 -c pytorch
 ### Pretrained weights download
 ```bash
 mkdir outs
-cd outs
-bash ../datasets/get_pretrained_models.sh
+cd datasets/
+bash get_pretrained_models.sh
 ```
 
 Please follow the instructions in `datasets/README.md` for preparing the dataset
