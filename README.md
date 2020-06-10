@@ -104,11 +104,12 @@ python scripts/video.py --src outs/epipolar/keypoint_h36m_fixed/video/multiview_
 ## Citing Epipolar Transformers
 If you find Epipolar Transformers helps your research, please cite the paper:
 ```
-@article{epipolartransformers,
-  title={Epipolar Transformers},
-  author={He, Yihui and Yan, Rui and Fragkiadaki, Katerina and Yu, Shoou-I},
-  journal={arXiv preprint arXiv:2005.04551},
-  year={2020}
+@InProceedings{epipolartransformers,
+author = {He, Yihui and Yan, Rui and Fragkiadaki, Katerina and Yu, Shoou-I},
+title = {Epipolar Transformers},
+booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2020}
 }
 ```
 
