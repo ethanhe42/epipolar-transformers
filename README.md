@@ -1,6 +1,4 @@
-# [Epipolar Transformers](https://arxiv.org/abs/2005.04551)
-
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/epipolar-transformers/3d-human-pose-estimation-on-human36m)](https://paperswithcode.com/sota/3d-human-pose-estimation-on-human36m?p=epipolar-transformers)
+# [Epipolar Transformers](https://arxiv.org/abs/2005.04551) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/epipolar-transformers/3d-human-pose-estimation-on-human36m)](https://paperswithcode.com/sota/3d-human-pose-estimation-on-human36m?p=epipolar-transformers)
 
 [Yihui He](http://yihui-he.github.io/), [Rui Yan](https://github.com/Yre), [Katerina Fragkiadaki](https://www.cs.cmu.edu/~katef/), [Shoou-I Yu](https://sites.google.com/view/shoou-i-yu/home) (Carnegie Mellon University, Facebook Reality Labs)
 
