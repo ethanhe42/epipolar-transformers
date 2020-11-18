@@ -1,7 +1,7 @@
 ### Human 3.6M Dataset (for epipolar transformer training)
 1. Download the H36M from the official website http://vision.imar.ro/human3.6m/description.php
 2. Process using https://github.com/CHUNYUWANG/H36M-Toolbox
-3. Undistort
+3. Undistort (optional)
 ```bash
 python scripts/undistort_h36m.py
 python scripts/undistort_h36m.py --anno ~/datasets/h36m/annot/h36m_train.pkl
