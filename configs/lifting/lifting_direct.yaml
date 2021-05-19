@@ -10,4 +10,6 @@ SOLVER:
     BASE_LR: 1e-5
     STEPS: (12,)
     MAX_EPOCHS: 16
+TEST:
+    PCK: False
 OUTPUT_DIR: outs/3D_heatmap_rot
