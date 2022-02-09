@@ -8,10 +8,10 @@
 Oral presentation and human pose demo videos ([playlist](https://www.youtube.com/playlist?list=PLkz610aVEqV-f4Ws0pH0e8Nm_2wTGI1yP)):
 <p align="center">
   <a href="https://www.youtube.com/watch?v=nfb0kfVWjcs">
-    <img width=420 src="assets/oral_presentation.png" alt>
+    <img width=420 src="https://raw.githubusercontent.com/yihui-he/epipolar-transformers/master/assets/oral_presentation.png" alt>
   </a>
   <a href="https://www.youtube.com/watch?v=ig5c-qTaYkg">
-    <img width=420 src="assets/human_pose_demo.png" alt>
+    <img width=420 src="https://raw.githubusercontent.com/yihui-he/epipolar-transformers/master/assets/human_pose_demo.png" alt>
   </a>
 </p>
 
@@ -67,7 +67,7 @@ python main.py --cfg configs/xxx.yaml DOTRAIN False WEIGHTS xxx.pth
 
 ## Visualization
 ### Epipolar Transformers Visualization 
-<img width=500 src="assets/et_vis.png" alt>
+<img width=500 src="https://raw.githubusercontent.com/yihui-he/epipolar-transformers/master/assets/et_vis.png" alt>
     
 - Download the [output pkls ](https://github.com/yihui-he/epipolar-transformers/releases/download/outputs/outs.epipolar.keypoint_h36m_fixed.visualizations.zip) for non-augmented models and extract under `outs/`
 - Make sure `outs/epipolar/keypoint_h36m_fixed/visualizations/h36m/output_1.pkl` exists.
@@ -76,7 +76,7 @@ python main.py --cfg configs/xxx.yaml DOTRAIN False WEIGHTS xxx.pth
 
 
 ### Human 3.6M input visualization
-<img width=450 src="assets/h36m_vis.png" alt>
+<img width=450 src="https://raw.githubusercontent.com/yihui-he/epipolar-transformers/master/assets/h36m_vis.png" alt>
 
 ```bash
 python main.py --cfg configs/epipolar/keypoint_h36m.yaml DOTRAIN False DOTEST False EPIPOLAR.VIS True  VIS.H36M True SOLVER.IMS_PER_BATCH 1
@@ -85,7 +85,7 @@ python main.py --cfg configs/epipolar/keypoint_h36m.yaml DOTRAIN False DOTEST Fa
 
 ### Human 3.6M prediction visualization
 <a href="https://www.youtube.com/watch?v=ig5c-qTaYkg">
-  <img width=400 src="assets/human_pose_demo.png" alt>
+  <img width=400 src="https://raw.githubusercontent.com/yihui-he/epipolar-transformers/master/assets/human_pose_demo.png" alt>
 </a>
 
 ```bash
