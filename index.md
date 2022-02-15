@@ -9,6 +9,7 @@ Oral presentation and human pose demo videos ([playlist](https://www.youtube.com
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nfb0kfVWjcs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ig5c-qTaYkg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Models
@@ -80,9 +81,9 @@ python main.py --cfg configs/epipolar/keypoint_h36m.yaml DOTRAIN False DOTEST Fa
 ```
 
 ### Human 3.6M prediction visualization
-<a href="https://www.youtube.com/watch?v=ig5c-qTaYkg">
-  <img width=400 src="https://raw.githubusercontent.com/yihui-he/epipolar-transformers/master/assets/human_pose_demo.png" alt>
-</a>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ig5c-qTaYkg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ```bash
 # generate images
