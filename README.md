@@ -1,1 +1,1 @@
-https://yihui-he.github.io/blog/epipolar-transformers
+https://yihui.dev/epipolar-transformers
